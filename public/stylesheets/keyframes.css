@@ -1,0 +1,8 @@
+@keyframes flame {
+    0%, 30%, 60%, 90% {
+        box-shadow: 0 0 10px 0px red;
+    }
+    15%, 45%, 75% {
+        box-shadow: 0 0 20px 0px red;
+    }
+}
