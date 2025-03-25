@@ -3,7 +3,7 @@
     <body>
         <%- include('../partial/header') %>
         <main id="bandas_list">
-            <div class="list">
+            <section class="list">
                 <% bandas.forEach(grupo=> { %>
                     <article>
                         <h2>
@@ -11,10 +11,11 @@
                         </h2>
                         <a href="/bandas/detail/<%= grupo.id %>">
                             <img src="/<%= grupo.cover %>" alt="Se muestra la imagen de la banda <%= grupo.nombre %>">
+                            <h3><%= grupo.title %></h3>
                         </a>
                     </article>
                 <% }); %>
-            </div>
+            </section>
         </main>
     </body>
 

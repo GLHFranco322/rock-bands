@@ -3,28 +3,24 @@
 <body>
   <%- include('../partial/header') %>
   <main class="register--main">
-    <h2>Se parte de nuestra comunidad</h2>
     <form action="/users/register" method="post">
-      <div>
+      <h2>Se parte de nuestra comunidad</h2>
         <label for="name">Nombre</label>
-        <input type="text" name="nombre" id="name" min="6" max="50" value="<%= locals.nombre ? nombre : "" %>">
-      </div>
-      <% if(locals.errores && locals.errores.nombre) {%>
+        <input type="text" name="nombre" id="name" min="6" max="50" value="<%= locals.nombre ? nombre : "" %>" placeholder="  " required>
+
+        <% if(locals.errores && locals.errores.nombre) {%>
         <p class="msg-error"> <i class="fa-solid fa-circle-exclamation"></i><%= errores.nombre.msg %></p>
       <% } %>
 
-      <div>
         <label for="email">Email</label>
-        <input type="email" name="correo" id="email" required value="<%= locals.correo ? correo : ""%>">
-      </div>
-      <% if(locals.errores && locals.errores.correo) {%>
+        <input type="email" name="correo" id="email" required value="<%= locals.correo ? correo : ""%>" placeholder="  " required>
+
+        <% if(locals.errores && locals.errores.correo) {%>
         <p class="msg-error"><i class="fa-solid fa-circle-exclamation"></i><%= errores.correo.msg %></p>
       <% } %>
 
-      <div>
         <label for="password">Contraseña</label>
-        <input type="password" name="contrasena" id="password" value="<%= locals.contrasena ? contrasena : ""%>">
-      </div>
+        <input type="password" name="contrasena" id="password" value="<%= locals.contrasena ? contrasena : ""%>" placeholder="  " required>
 
       <% if(locals.errores && locals.errores.contrasena) {%>
         <p class="msg-error"><i class="fa-solid fa-circle-exclamation"></i><%= errores.contrasena.msg %></p>
