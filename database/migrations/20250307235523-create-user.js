@@ -16,16 +16,19 @@ module.exports = {
       },
       correo: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
       },
       contrasena: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false
       },
-      profile: {
+      avatar: {
         type: Sequelize.STRING
       },
       rol_id: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
           model: {
             tableName: 'rols'
@@ -35,6 +38,12 @@ module.exports = {
       },
       nick_name: {
         type: Sequelize.STRING
+      },
+      fecha_nacimiento: {
+        type: Sequelize.DATE
+      },
+      dni: {
+        type: Sequelize.INTEGER
       },
       created_at: {
         allowNull: false,

@@ -1,5 +1,5 @@
-const db = require('../db/index');
-const {User} = require('../database/models');
+
+const {Artist} = require('../database/models');
 
 const bandasController = {
     listado: (req, res) => {
